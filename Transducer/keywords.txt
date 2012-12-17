@@ -1,0 +1,6 @@
+Transducer	KEYWORD1
+getPressures	KEYWORD2
+getVoltage	KEYWORD2
+getPSI	KEYWORD2
+getPa	KEYWORD2
+getMPa	KEYWORD2

@@ -1,0 +1,7 @@
+ThermoTemp	KEYWORD1
+getTemps	KEYWORD2
+getVoltage	KEYWORD2
+getCelsius	KEYWORD2
+getKelvin	KEYWORD2
+getFahrenheit	KEYWORD2
+getRankine	KEYWORD2
