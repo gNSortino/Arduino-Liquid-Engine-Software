@@ -15,6 +15,9 @@
     Note that this library will not setup any pins. It
 	is expected that these will be defined by the calling 
 	program.
+	Change Log:
+		GNS 2013-07-28: updated psi to reflect atmospheric (psia)
+			rather than gauge
 */
 
 #include "Arduino.h"
@@ -41,7 +44,7 @@ void Transducer::getPressures (int analogSignalF, float pressures[])
 
 float Transducer::getVoltage (float analogSignal)
 {
-  float voltage = ((5.0 * analogSignal) / 1024.0);
+  float voltage = ((5.0 * analogSignal) / 1023.0);
   return voltage;
   
 }
@@ -76,8 +79,8 @@ float Transducer::getPSI (float voltage)
   //float psi = (246.375 * voltage) - 108.69;
   
   // MSI (1000 PSI ratiometric)
-  float radj = (0.2 / 0.25) * (4.93 - 5); //I'm hard coding the Vpmeasured for now...)
-  float psi = ((voltage / (1 + radj)) -0.5) / 0.004;
+  float radj = (0.2 / 0.25) * (5.0 - 5); //I'm hard coding the Vp measured for now...)
+  float psi = (((voltage / (1 + radj)) -0.5) / 0.004) + 14.69;
   return psi;
 }
 

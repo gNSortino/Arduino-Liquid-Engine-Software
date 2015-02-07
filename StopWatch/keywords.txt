@@ -1,0 +1,5 @@
+StopWatch	KEYWORD1
+startTimer	KEYWORD2
+timerStatus	KEYWORD2
+timeElapsed	KEYWORD2
+millisToSleep	KEYWORD2

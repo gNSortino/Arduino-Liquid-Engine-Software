@@ -1,0 +1,7 @@
+PMCtrl	KEYWORD1
+setTarget	KEYWORD2
+setServoSpeed	KEYWORD2
+setAcceleration	KEYWORD2
+goHome	KEYWORD2
+getPosition	KEYWORD2
+getErrors	KEYWORD2

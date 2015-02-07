@@ -26,23 +26,27 @@ class EngineMath
 {
   public:
     EngineMath ();	
-	float LiquidMassFlow ( float cd,   	// Coefficient of Discharge (Dimensionless)
-							float g,    	// Gravity 9.80665 (m/sec^2)
+	float LiquidMassFlow ( float cd,   		// Coefficient of Discharge (Dimensionless)
 							float den,  	// Liquid Density (kg/m^3)
-							float p1,  	// Inlet Pressure (psi) 
-							float p2,  	// Outlet Pressure (psi)
-							float a);  	// Orifice Area (m^2)
-	float GasMassFlow (	float cd,  		// Coefficient of Discharge (Dimensionless)
+							float p1,  		// Inlet Pressure (psi) 
+							float p2,  		// Outlet Pressure (psi)
+							float a);  		// Orifice Area (m^2)
+	float GasMassFlow (		float cd,  		// Coefficient of Discharge (Dimensionless)
 							float g,    	// Gravity 9.80665 (m/sec2)
 							float k,   		// Gas Specific Heat Ratio (Dimensionless)
-							float r,   		// Universal Gas constant 8,314.4621000 (J/kg mol-K)
 							float z,    	// Gas Compressability Factor (Dimensionless) 
 							float temp, 	// Gas Temperature at inlet (Kelvin)
 							float m,    	// Gas Molecular Mass  (mol)
-							float p1,  	// Inlet Pressure (psi) 
-							float p2,  	// Outlet Pressure (psi)
-							float a);  	// Orifice Area (m^2)
+							float p1,  		// Inlet Pressure (psi) 
+							float p2,  		// Outlet Pressure (psi)
+							float a);  		// Orifice Area (m^2)
 	void MassFlowConvert (	float mf[]);	// Mass Flow array
+	float thrustCalc (		float k,		// specific heat ratio for the engine
+							float p1PSI, 	// chamber pressure (PSI)
+							float p2PSI, 	// exit pressure (PSI)
+							float p3PSI, 	// atmospheric pressure (PSI)
+							float aExit, 	// Nozzle exit area m^2
+							float aThroat);	// Nozzle throat area m^2
 	
 };
 

@@ -15,6 +15,9 @@
     Note that this library will not setup any pins. It
 	is expected that these will be defined by the calling 
 	program.
+	Change Log:
+		GNS 2013-07-28: updated psi to reflect atmospheric (psia)
+			rather than gauge
 */
 #ifndef Transducer_h
 #define Transducer_h

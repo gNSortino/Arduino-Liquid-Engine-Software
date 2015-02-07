@@ -1,0 +1,3 @@
+LoadCell	KEYWORD1
+getForce	KEYWORD2
+getVoltage	KEYWORD2
